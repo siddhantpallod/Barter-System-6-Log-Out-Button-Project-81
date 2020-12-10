@@ -36,7 +36,15 @@ export default class HomeScreen extends React.Component{
                 title = {item.itemName}
                 subtitle = {item.description}
                 rightElement = {
-                    <TouchableOpacity>
+                    <TouchableOpacity 
+                    style = {{
+                        width : 100,
+                        height : 30,
+                        backgroundColor : 'cyan',
+                        borderWidth : 2,
+                        alignSelf : 'center',
+                        borderRadius : 15,
+                    }}>
                         <Text style = {{fontSize : 20,textAlign : 'center'}}>Exchange</Text>
                     </TouchableOpacity>
                 }
@@ -46,7 +54,7 @@ export default class HomeScreen extends React.Component{
     }
 
     componentDidMount(){
-        this.getAllRequests
+        this.getAllRequests()
     }
 
     componentWillUnmount(){
